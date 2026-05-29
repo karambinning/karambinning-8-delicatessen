@@ -1,0 +1,591 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>№8 Delicatessen — Gordon Road, West Bridgford</title>
+<meta name="description" content="№8 Delicatessen. A neighbourhood delicatessen on Gordon Road, West Bridgford (NG2 5LN), south of the Trent in Nottingham.">
+<meta name="theme-color" content="#4C7BE1">
+<meta property="og:title" content="№8 Delicatessen · West Bridgford">
+<meta property="og:description" content="A neighbourhood deli on Gordon Road, NG2 5LN.">
+<meta property="og:type" content="website">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --cobalt:      #4C7BE1;
+    --cobalt-deep: #2A4FA8;
+    --saffron:     #FFD500;
+    --gold:        #E0BC00;
+    --paper:       #F5EFE2;
+    --paper-deep:  #ECE3CD;
+    --ink:         #14233E;
+    --font-display: "Fraunces", "Cormorant Garamond", "Times New Roman", serif;
+    --font-body:    "Newsreader", "Georgia", "Times New Roman", serif;
+    --rhythm: clamp(1rem, 0.7rem + 0.7vw, 1.1875rem);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: var(--font-body);
+    font-size: var(--rhythm);
+    line-height: 1.55;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  /* Paper-grain overlay — kills digital flatness */
+  body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 100;
+    opacity: 0.45;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.05 0'/></filter><rect width='100%25' height='100%25' filter='url(%23n)'/></svg>");
+    mix-blend-mode: multiply;
+  }
+
+  p { text-wrap: pretty; hyphens: auto; }
+  h1, h2, h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+    text-wrap: balance;
+    margin: 0;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* ─── Top metadata strip ─── */
+  .topstrip {
+    background: var(--ink);
+    color: var(--paper);
+    font-family: var(--font-body);
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    padding: 0.75rem clamp(1.25rem, 4vw, 4rem);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+  .topstrip .dot {
+    display: inline-block;
+    width: 0.45rem; height: 0.45rem;
+    background: var(--saffron);
+    border-radius: 50%;
+    margin-right: 0.6rem;
+    vertical-align: middle;
+  }
+  .topstrip em {
+    font-family: var(--font-display);
+    font-style: italic;
+    font-size: 0.95rem;
+    letter-spacing: 0.02em;
+    text-transform: none;
+    color: var(--saffron);
+    font-weight: 500;
+  }
+
+  /* ─── Hero ─── */
+  .hero {
+    background: var(--cobalt);
+    color: var(--paper);
+    padding: clamp(2rem, 5vw, 4rem) clamp(1.5rem, 4vw, 4rem) clamp(3rem, 8vw, 6.5rem);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .hero__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: clamp(2.5rem, 7vw, 5.5rem);
+    font-size: 0.78rem;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    flex-wrap: wrap;
+    gap: 1rem;
+    color: rgba(245, 239, 226, 0.78);
+  }
+
+  .hero__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 7fr) minmax(0, 5fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: end;
+  }
+
+  .hero__mark {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 144;
+    font-weight: 400;
+    font-size: clamp(7rem, 26vw, 21rem);
+    line-height: 0.82;
+    letter-spacing: -0.045em;
+    color: var(--paper);
+    margin: 0 0 0.15em;
+    display: flex;
+    align-items: baseline;
+    gap: 0.02em;
+  }
+  .hero__mark .numero {
+    font-style: italic;
+    font-weight: 500;
+    color: var(--saffron);
+    font-size: 0.8em;
+    margin-right: 0.04em;
+    transform: translateY(-0.04em);
+  }
+
+  .hero__wordmark {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 72;
+    font-size: clamp(1.6rem, 4.5vw, 3rem);
+    line-height: 1;
+    letter-spacing: 0.03em;
+    color: var(--paper);
+    text-transform: uppercase;
+    font-weight: 300;
+    border-top: 1px solid rgba(255, 213, 0, 0.5);
+    padding-top: 0.6em;
+    max-width: max-content;
+  }
+
+  .hero__meta {
+    border-left: 1px solid rgba(245, 239, 226, 0.3);
+    padding: 0 0 0.5rem clamp(1.25rem, 2.5vw, 2.5rem);
+    color: var(--paper);
+    max-width: 26rem;
+  }
+  .hero__meta .label {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--saffron);
+    margin: 0 0 0.7rem;
+    display: block;
+  }
+  .hero__meta .addr {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 36;
+    font-size: clamp(1.1rem, 1.9vw, 1.4rem);
+    line-height: 1.25;
+    letter-spacing: -0.005em;
+    margin: 0 0 1.6rem;
+    font-weight: 400;
+  }
+  .hero__meta p:not(.addr) {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: rgba(245, 239, 226, 0.88);
+    margin: 0;
+  }
+
+  /* ─── Marquee ─── */
+  .marquee {
+    background: var(--saffron);
+    color: var(--ink);
+    overflow: hidden;
+    padding: clamp(1.4rem, 3vw, 2.4rem) 0;
+    border-top: 1px solid var(--gold);
+    border-bottom: 1px solid var(--gold);
+  }
+  .marquee__track {
+    display: inline-flex;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+    white-space: nowrap;
+    animation: scroll 48s linear infinite;
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 96;
+    font-size: clamp(2rem, 6vw, 4.5rem);
+    line-height: 1;
+    letter-spacing: -0.02em;
+    font-style: italic;
+    font-weight: 400;
+    padding-left: clamp(2.5rem, 5vw, 4.5rem);
+  }
+  .marquee__track span {
+    display: inline-flex;
+    align-items: center;
+    gap: clamp(2.5rem, 5vw, 4.5rem);
+  }
+  .marquee__track .dot {
+    display: inline-block;
+    width: 0.35em; height: 0.35em;
+    background: var(--cobalt);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+  @keyframes scroll { to { transform: translateX(-50%); } }
+
+  /* ─── Place ─── */
+  .place {
+    padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 4vw, 4rem);
+    max-width: 84rem;
+    margin: 0 auto;
+  }
+  .place__grid {
+    display: grid;
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+    gap: clamp(2rem, 6vw, 6rem);
+    align-items: start;
+  }
+  .place__label {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--cobalt-deep);
+    margin: 0 0 1.5rem;
+    display: block;
+  }
+  .place__h {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 144;
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    line-height: 0.95;
+    letter-spacing: -0.03em;
+    max-width: 14ch;
+  }
+  .place__h em {
+    font-style: italic;
+    color: var(--cobalt);
+    font-weight: 500;
+  }
+  .place__body p {
+    font-family: var(--font-body);
+    font-size: clamp(1.05rem, 1.4vw, 1.22rem);
+    line-height: 1.65;
+    margin: 0 0 1.2rem;
+    max-width: 36rem;
+    color: var(--ink);
+  }
+  .place__body p:first-of-type::first-letter {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 144;
+    font-style: italic;
+    font-size: 3.5em;
+    line-height: 0.82;
+    float: left;
+    padding: 0.08em 0.12em 0 0;
+    color: var(--cobalt);
+    font-weight: 500;
+  }
+  .place__body p:last-child { margin-bottom: 0; }
+
+  /* ─── Location ─── */
+  .location {
+    background: var(--paper-deep);
+    padding: clamp(4rem, 10vw, 8rem) clamp(1.5rem, 4vw, 4rem);
+    border-top: 1px solid rgba(20, 35, 62, 0.08);
+  }
+  .location__inner {
+    max-width: 84rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1.3fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: stretch;
+  }
+  .location__card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  .location__label {
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    letter-spacing: 0.3em;
+    text-transform: uppercase;
+    color: var(--cobalt-deep);
+    margin: 0 0 1.5rem;
+    display: block;
+  }
+  .location__addr {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 72;
+    font-size: clamp(1.8rem, 3.2vw, 2.6rem);
+    line-height: 1.15;
+    letter-spacing: -0.01em;
+    margin: 0 0 1.5rem;
+    color: var(--ink);
+  }
+  .location__addr em {
+    font-style: italic;
+    color: var(--cobalt);
+    font-weight: 500;
+  }
+  .location__meta {
+    font-family: var(--font-body);
+    font-size: 0.98rem;
+    line-height: 1.7;
+    color: var(--ink);
+    margin: 0 0 1.5rem;
+    max-width: 28rem;
+  }
+  .location__meta strong { font-weight: 600; }
+  .location__cta {
+    display: inline-block;
+    align-self: flex-start;
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 36;
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--cobalt);
+    border-bottom: 1.5px solid var(--gold);
+    padding: 0 0 0.25rem;
+    transition: color 0.2s ease, border-color 0.2s ease, transform 0.25s ease;
+  }
+  .location__cta::after { content: "  →"; transition: margin 0.25s ease; }
+  .location__cta:hover {
+    color: var(--cobalt-deep);
+    border-color: var(--cobalt);
+  }
+  .location__cta:hover::after { margin-left: 0.3em; }
+
+  .location__map {
+    background: var(--paper);
+    border: 1px solid rgba(20, 35, 62, 0.12);
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+    position: relative;
+  }
+  .location__map iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+    filter: contrast(0.95) saturate(0.85);
+  }
+
+  /* ─── Footer letterhead ─── */
+  .foot {
+    background: var(--ink);
+    color: var(--paper);
+    padding: clamp(3rem, 7vw, 5rem) clamp(1.5rem, 4vw, 4rem) clamp(1.5rem, 3vw, 2.5rem);
+  }
+  .foot__inner {
+    max-width: 84rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+    gap: clamp(2rem, 5vw, 5rem);
+    align-items: end;
+  }
+  .foot__brand {
+    font-family: var(--font-display);
+    font-variation-settings: "opsz" 144;
+    font-size: clamp(2.8rem, 7vw, 5rem);
+    line-height: 0.9;
+    letter-spacing: -0.035em;
+    margin: 0 0 1rem;
+  }
+  .foot__brand em {
+    font-style: italic;
+    color: var(--saffron);
+    font-weight: 500;
+    margin-right: 0.05em;
+  }
+  .foot__tag {
+    font-family: var(--font-body);
+    font-style: italic;
+    font-size: 1rem;
+    color: rgba(245, 239, 226, 0.62);
+    max-width: 32rem;
+    margin: 0;
+  }
+  .foot__meta {
+    text-align: right;
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    line-height: 1.75;
+    color: rgba(245, 239, 226, 0.78);
+  }
+  .foot__meta .label {
+    font-size: 0.7rem;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--saffron);
+    display: block;
+    margin-bottom: 0.6rem;
+  }
+  .foot__rule {
+    border: none;
+    height: 1px;
+    background: rgba(245, 239, 226, 0.15);
+    margin: clamp(2rem, 5vw, 3.5rem) 0 1.25rem;
+  }
+  .foot__base {
+    max-width: 84rem;
+    margin: 0 auto;
+    font-family: var(--font-body);
+    font-size: 0.72rem;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(245, 239, 226, 0.45);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  /* ─── Scroll reveal (CSS only) ─── */
+  @supports (animation-timeline: view()) {
+    .reveal {
+      animation: rise both;
+      animation-timeline: view();
+      animation-range: entry 0% cover 25%;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(2.5rem); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+  }
+
+  /* ─── Responsive ─── */
+  @media (max-width: 760px) {
+    .hero__grid { grid-template-columns: 1fr; gap: 2.5rem; }
+    .hero__mark { font-size: clamp(6.5rem, 32vw, 12rem); }
+    .hero__meta {
+      border-left: none;
+      border-top: 1px solid rgba(245, 239, 226, 0.3);
+      padding: 1.5rem 0 0;
+      max-width: 100%;
+    }
+    .place__grid { grid-template-columns: 1fr; gap: 1.5rem; }
+    .location__inner { grid-template-columns: 1fr; }
+    .foot__inner { grid-template-columns: 1fr; align-items: start; gap: 2rem; }
+    .foot__meta { text-align: left; }
+    .topstrip { font-size: 0.7rem; padding: 0.6rem 1rem; }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee__track { animation: none; }
+    .reveal { animation: none; }
+    html { scroll-behavior: auto; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topstrip">
+  <span><span class="dot"></span>Delicatessen · Gordon Road · NG2 5LN</span>
+  <em>Drop in</em>
+  <span>West Bridgford · Nottingham</span>
+</div>
+
+<!-- ─── HERO ─── -->
+<section class="hero">
+  <div class="hero__top">
+    <span>On Gordon Road</span>
+    <span>South of the Trent</span>
+    <span>Nottingham · NG2</span>
+  </div>
+
+  <div class="hero__grid">
+    <div>
+      <h1 class="hero__mark"><span class="numero">№</span>8</h1>
+      <div class="hero__wordmark">Delicatessen</div>
+    </div>
+    <div class="hero__meta">
+      <span class="label">Find us</span>
+      <p class="addr">8 Gordon Road,<br>West Bridgford,<br>Nottingham NG2 5LN</p>
+      <p>A neighbourhood delicatessen on a residential corner south of the Trent. A door, a window, a counter inside.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── MARQUEE ─── -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee__track">
+    <span>Bread<span class="dot"></span></span>
+    <span>Cheese<span class="dot"></span></span>
+    <span>Charcuterie<span class="dot"></span></span>
+    <span>Olives<span class="dot"></span></span>
+    <span>Coffee<span class="dot"></span></span>
+    <span>Pastry<span class="dot"></span></span>
+    <span>Bread<span class="dot"></span></span>
+    <span>Cheese<span class="dot"></span></span>
+    <span>Charcuterie<span class="dot"></span></span>
+    <span>Olives<span class="dot"></span></span>
+    <span>Coffee<span class="dot"></span></span>
+    <span>Pastry<span class="dot"></span></span>
+  </div>
+</div>
+
+<!-- ─── PLACE ─── -->
+<section class="place reveal">
+  <div class="place__grid">
+    <div>
+      <span class="place__label">A note on the place</span>
+      <h2 class="place__h">Eight, <em>on</em> Gordon Road.</h2>
+    </div>
+    <div class="place__body">
+      <p>Gordon Road is one of those quieter West Bridgford streets where the shop is a small thing — a door, a window, a counter inside — and №8 is one of them. The kind of corner you walk past for a week, then walk into, and then keep coming back to.</p>
+      <p>The shop trades on what you'd hope a neighbourhood delicatessen does: provisions chosen one at a time, the kind of small selection that means someone made a decision. There is no menu printed on this page because the right one is the one written up inside, the morning you visit.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── LOCATION ─── -->
+<section class="location">
+  <div class="location__inner">
+    <div class="location__card reveal">
+      <div>
+        <span class="location__label">Visit</span>
+        <p class="location__addr">8 Gordon Road,<br><em>West Bridgford,</em><br>Nottingham NG2 5LN</p>
+        <p class="location__meta">
+          A residential corner of <strong>West Bridgford</strong>, south of the Trent. Street parking on Gordon Road and the surrounding crescents.
+        </p>
+      </div>
+      <a class="location__cta" href="https://www.openstreetmap.org/?mlat=52.9304795&amp;mlon=-1.1256052#map=18/52.9304795/-1.1256052" target="_blank" rel="noopener">Open in maps</a>
+    </div>
+    <div class="location__map reveal">
+      <iframe
+        src="https://www.openstreetmap.org/export/embed.html?bbox=-1.1316052%2C52.9274795%2C-1.1196052%2C52.9334795&amp;layer=mapnik&amp;marker=52.9304795%2C-1.1256052"
+        loading="lazy"
+        title="Map showing 8 Gordon Road, West Bridgford, Nottingham NG2 5LN"></iframe>
+    </div>
+  </div>
+</section>
+
+<!-- ─── FOOTER ─── -->
+<footer class="foot">
+  <div class="foot__inner">
+    <div>
+      <div class="foot__brand"><em>№</em>8 Delicatessen</div>
+      <p class="foot__tag">A small deli on a corner of Gordon Road. Provisions, by the door.</p>
+    </div>
+    <div class="foot__meta">
+      <span class="label">Letterhead</span>
+      8 Gordon Road<br>
+      West Bridgford<br>
+      Nottingham NG2 5LN<br>
+      United Kingdom
+    </div>
+  </div>
+  <hr class="foot__rule">
+  <div class="foot__base">
+    <span>№8 Delicatessen · West Bridgford · NG2</span>
+    <span>Drop in.</span>
+  </div>
+</footer>
+
+</body>
+</html>
